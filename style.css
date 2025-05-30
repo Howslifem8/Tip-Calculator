@@ -56,3 +56,29 @@
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90vw;
+        height: 50vh;
+    }
+    .step2label {
+      margin-top: 4rem;
+      padding-top: 2rem;
+    }
+    .bill-amount-container, .slider-container {
+        width: 90vw;
+    }
+    .container input {
+        width: 90vw;
+    }
+    .container button {
+        width: 40vw;
+        margin-bottom: 3rem;
+    }
+  
+    .step1button{
+        width: 90vw;
+        margin-bottom: 3rem;
+    }
+}

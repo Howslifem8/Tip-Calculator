@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="container w3-card-4 w3-light-grey " id="step1" style="margin-top: 5rem; display: block;">
+    <div class="container w3-card-4 w3-light-grey " id="step1" style=" height: max-content; margin-top: 5rem; display: block;">
         <h1 class="w3-center">Tip Calculator</h1>
 
         <form  id="tip-form" >
@@ -33,23 +33,32 @@
                 <div id="slider_value">0</div>
             </div>
 
-            <button type="submit" class="w3-button w3-blue w3-center">Calculate Tip</button>
+            <div class="w3-center">
+                <button type="submit" class="w3-button w3-blue w3-center" style="width: 30%; display: inline-block; margin-bottom: 2rem;">Calculate Tip</button>
+            </div>
+            
         </form>
         
     </div>
 
-    <div class="container w3-card-4 w3-light-grey" id="step2" style=" margin-top: 5rem; display: none;">
+    <div class="container w3-card-4 w3-light-grey" id="step2" style=" height: max-content; margin-top: 5rem; display: none;">
         <h2 class="w3-center">Tip Amount</h2>
-        <p id="result" class="w3-center">The tip on $tab_Amount at $tip_percentage is $tip. </p>
+        <p id="tip_result" class="w3-center">The tip on $tab_Amount at $tip_percentage is $tip. </p>
+        <h2 class="w3-center">Total Amount</h2>
+        <p id="total_result" class="w3-center">The total amount to be paid is $total.</p>
 
         <h2 class="w3-center">Split Bill:</h2>
 
         <div class="split-bill-container w3-center">
-            <label for="split-bill">Number of People:</label>
-            <input type="range" id="split_bill" class="w3-input" min="1" max="20" value="1" oninput="splitSlider()">
-            <div id="slider_value">0</div>
-            <p id="split_amount">Each person pays: $0.00</p>
-        <button class="w3-button w3-red w3-center" onclick="reset()">Reset</button>
+            <div class="w3-center">
+                <input type="range" id="split_slider" min="1" max="20" value="1" style="width: 80%; display: inline-block;">
+                <p id="split_label">0</p>
+            </div>
+
+           
+            
+            <p id="split_result">Each person pays: $0.00</p>
+        <button class="w3-button w3-red w3-center" id="reset_button" onclick="reset()">Reset</button>
     </div>
 </body>
 

@@ -22,19 +22,52 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('step1').style.display = 'none';   // Hide original card
         document.getElementById('step2').style.display = 'block';  // Show result card
 
-        
-        document.getElementById('result').textContent = `Tip on $${tab_Amount.toFixed(2)} at ${tip_Percentage}% is $${tip.toFixed(2)}`;
-      
-
-        const split_Amount = parseFloat(document.getElementById('split_bill').value);
-        const split_Slider = document.getElementById('split_bill');
-        split_Slider.addEventListener('input', splitSlider);
-        splitSlider(1); 
-
+        //Update the result card with the calculated tip
+        document.getElementById('tip_result').textContent = `Tip on $${tab_Amount.toFixed(2)} at ${tip_Percentage}% is $${tip.toFixed(2)}`;
+        document.getElementById('total_result').textContent = `Total amount (including tip) is $${(tab_Amount + tip).toFixed(2)}`;
+        //Binding Slider & update functionality
+        const split_slider = document.getElementById('split_slider');
+        const splitLabel = document.getElementById('split_label');
+        const split_result = document.getElementById('split_result');
 
         
+       
+        // split_slider.addEventListener('input', splitSliderUpdate);
+        
+
+        function splitSliderUpdate() {
+
+            const people = parseInt(split_slider.value);
+            const total = tab_Amount + tip;
+            const perPerson = total / people;
+
+            splitLabel.textContent = `${people} ${people === 1 ? 'person' : 'people'}`;
+            split_result.textContent = `Each person pays $${perPerson.toFixed(2)}`;
+
+        }
+        
+        split_slider.addEventListener('input', splitSliderUpdate);
+        splitSliderUpdate();    // Initial call to set the default value
 
 
+        // Slider functionality for tip percentage
+        const reset_button = document.getElementById('reset_button');
+        reset_button.addEventListener('click', function() {
+            //Reset form inputs 
+            document.getElementById('tab_Amount').value = '';
+            document.getElementById('tip_slider').value = '15'; 
+            document.getElementById('slider_value').textContent = '15%'; 
+
+            //Reset split slider and results
+            document.getElementById('split_slider').value = '1';
+            document.getElementById('split_label').textContent = '1 person';
+            document.getElementById('split_result').textContent = 'Each person pays $0.00';
+            
+
+            //Show original card and hide result card
+            document.getElementById('step1').style.display = 'block';  
+            document.getElementById('step2').style.display = 'none';   
+        });
 
 
     });
@@ -65,16 +98,7 @@ function tipSlider() {
     output.textContent = `${slider.value}%`;
 }
 
-function splitSlider() {
-    const slider = document.getElementById('split_bill');
-    const output = document.getElementById('slider_split_value');
-    const val = parseInt(slider.value);
 
-
-    output.textContent = `${val}`;
-    console.log("Slider moved:", val);
-
-}
 
 
 

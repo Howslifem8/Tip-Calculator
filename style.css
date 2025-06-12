@@ -1,84 +1,89 @@
-.bill-amount-container{
-    width: 70vmin;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px 20px;
-    border-radius: 5px;
-    margin: 0 auto;
-}
-
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
-  width: 60vw;
+  width: 90%;
+  max-width: 500px;
   margin: 0 auto;
   background-color: #f0f0f0;
+  padding: 1rem;
 }
 
-.container input{
-  width: 70vmin;
+#tip-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  width: 100%;
+}
+
+.bill-amount-container,
+.slider-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.custom_labels {
+  font-size: large;
+  color: rgb(27, 101, 122);
+}
+
+#tip_mode,
+.container input,
+.slider-container input[type="range"] {
+  width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
-.container button{
+
+.container button,
+.step1button {
   padding: 10px 20px;
   background-color: #28a745;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.slider-container{
-  display: flex;
-  justify-content: space-between;
-  width: 70vmin;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 30px 20px;
-  border-radius: 5px;
-  margin: 0 auto;
-}
-
-.slider-container input[type="range"] {
-  width: 70vmin;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 2rem;
 }
 
 #slider_value {
-    margin-left: 1rem;
-    font-weight: bold;
-    font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90vw;
-        height: 50vh;
-    }
-    .step2label {
-      margin-top: 4rem;
-      padding-top: 2rem;
-    }
-    .bill-amount-container, .slider-container {
-        width: 90vw;
-    }
-    .container input {
-        width: 90vw;
-    }
-    .container button {
-        width: 40vw;
-        margin-bottom: 3rem;
-    }
-  
-    .step1button{
-        width: 90vw;
-        margin-bottom: 3rem;
-    }
+/* Hide number input arrows */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+
+  .step2label {
+    margin-top: 4rem;
+    padding-top: 2rem;
+  }
+
+  .container button {
+    max-width: none;
+  }
 }

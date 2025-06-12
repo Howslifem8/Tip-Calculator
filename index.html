@@ -17,12 +17,28 @@
 
         <form  id="tip-form" >
             <div class="bill-amount-container">
-                <label for="bill-amount">Bill Amount:</label>
+                <label for="bill-amount" class="custom_labels">Bill Amount:</label>
                 <input type="number" id="tab_Amount" class="w3-input" required>
             </div>
+
+            <div class="bill-amount-container">
+                <label for="tip_mode" class="custom_labels">Calculate Tip Before Tax</label>
+                <!-- onchange="togglePreTaxBill()" -->
+                <select id="tip_mode" class="w3-select w3-border">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div id="pre-tax-bill-container" class="bill-amount-container" style="display: none;">
+                <label for="pre-tax-bill" class="custom_labels">Pre-Tax Bill:</label>
+                <input type="number" id="pre_tax_amount" class="w3-input">
+            </div>  
+
+
             <div class="slider-container">
-                <label for="tip-percentage">Tip Percentage:</label>
-                <input type="range" id="tip_slider" class="w3-input" min="0" max="100" value="15" step="1" list="tickmarks" oninput="tipSlider()">
+                <label for="tip-percentage" class="custom_labels">Tip Percentage:</label>
+                <input type="range" id="tip_slider" class="w3-input" min="0" max="50" value="15" step="1" list="tickmarks" oninput="tipSlider()">
                 <datalist id="tickmarks">
                 <option value="10" label="10%"></option>
                 <option value="15" label="15%"></option>

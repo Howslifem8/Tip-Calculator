@@ -32,6 +32,11 @@
   color: rgb(27, 101, 122);
 }
 
+.font_color_blue {
+  color: rgb(25, 96, 116);
+  font-style: oblique;
+}
+
 #tip_mode,
 .container input,
 .slider-container input[type="range"] {

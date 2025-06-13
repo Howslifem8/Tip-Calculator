@@ -50,10 +50,19 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('step1').style.display = 'none';   // Hide original card
         document.getElementById('step2').style.display = 'block';  // Show result card
 
+
+
+
+
         //Update the result card with the calculated tip
         document.getElementById('tip_result').textContent = `Tip on $${baseAmount.toFixed(2)} at ${tip_Percentage}% is $${tip.toFixed(2)}`;
         // document.getElementById('tip_result').textContent = `Tip on $${tab_Amount.toFixed(2)} at ${tip_Percentage}% is $${tip.toFixed(2)}`;
         document.getElementById('total_result').textContent = `Total amount (including tip) is $${(tab_Amount + tip).toFixed(2)}`;
+
+
+
+
+
         //Binding Slider & update functionality
         const split_slider = document.getElementById('split_slider');
         const splitLabel = document.getElementById('split_label');
@@ -86,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('tab_Amount').value = '';
             document.getElementById('tip_slider').value = '15'; 
             document.getElementById('slider_value').textContent = '15%'; 
+            document.getElementById('tip_mode').value = 'no';
 
             //Reset split slider and results
             document.getElementById('split_slider').value = '0';
@@ -93,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('split_result').textContent = 'Each person pays $0.00';
             
 
-            //Show original card and hide result card
+            //Show original card and hide result card + hide pre-tax amount input
+            pre_tax_bill_container.style.display = 'none';
             document.getElementById('step1').style.display = 'block';  
             document.getElementById('step2').style.display = 'none';   
         });

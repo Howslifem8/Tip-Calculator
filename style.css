@@ -34,7 +34,7 @@
 
 .font_color_blue {
   color: rgb(25, 96, 116);
-  font-style: oblique;
+  
 }
 
 #tip_mode,
@@ -84,7 +84,7 @@ input[type="number"] {
   }
 
   .step2label {
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding-top: 2rem;
   }
 

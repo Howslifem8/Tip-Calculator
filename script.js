@@ -55,9 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         //Update the result card with the calculated tip
-        document.getElementById('tip_result').textContent = `Tip on $${baseAmount.toFixed(2)} at ${tip_Percentage}% is $${tip.toFixed(2)}`;
+        document.getElementById('tip_result').innerHTML = `Tip on <strong>$${baseAmount.toFixed(2)}</strong> at <strong>${tip_Percentage}%</strong> is <strong>$${tip.toFixed(2)}</strong>`;
         // document.getElementById('tip_result').textContent = `Tip on $${tab_Amount.toFixed(2)} at ${tip_Percentage}% is $${tip.toFixed(2)}`;
-        document.getElementById('total_result').textContent = `Total amount (including tip) is $${(tab_Amount + tip).toFixed(2)}`;
+        document.getElementById('total_result').innerHTML = `Total amount (including tip) is <strong>$${(tab_Amount + tip).toFixed(2)}</strong>`;
+
 
 
 
@@ -79,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const total = tab_Amount + tip;
             const perPerson = total / people;
 
-            splitLabel.textContent = `${people} ${people === 1 ? 'person' : 'people'}`;
-            split_result.textContent = `Each person pays $${perPerson.toFixed(2)}`;
+            splitLabel.innerHTML = `<strong>${people} ${people === 1 ? 'person' : 'people'}</strong>`;
+            split_result.innerHTML = `Each person pays <strong>$${perPerson.toFixed(2)}</strong>`;
 
         }
         

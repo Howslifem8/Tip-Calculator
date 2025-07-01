@@ -18,7 +18,7 @@
         <form  id="tip-form" >
             <div class="bill-amount-container">
                 <label for="bill-amount" class="custom_labels">Bill Total:</label>
-                <input type="number" id="tab_Amount" class="w3-input" required>
+                <input type="number" id="tab_Amount" class="w3-input" step="0.01" min="0" required>
             </div>
 
             <div class="bill-amount-container">
@@ -32,7 +32,7 @@
 
             <div id="pre-tax-bill-container" class="bill-amount-container" style="display: none;">
                 <label for="pre-tax-bill" class="custom_labels">Total Before Tax:</label>
-                <input type="number" id="pre_tax_amount" class="w3-input">
+                <input type="number" id="pre_tax_amount" step="0.01" min="0" class="w3-input">
             </div>  
 
 

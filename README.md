@@ -13,8 +13,20 @@ A responsive web app that helps you calculate tips quickly and easily. Whether y
 - **Split the Bill** evenly among multiple people
 - Fully **responsive design** for mobile and desktop use
 
+## Screenshots
 
-## 🛠️ How to Use
+### Mobile View
+![Mobile Screenshot](screenshots/mobile-view.png)
+![Mobile Screenshot](screenshots/mobile-view2.png)
+
+
+### Desktop View
+![Desktop Screenshot](screenshots/desktop-view.png)
+![Desktop Screenshot](screenshots/desktop-view2.png)
+
+
+
+## How to Use
 
 1. **Enter the total bill** amount.
 2. **Use the slider** or input a custom tip percentage.
@@ -27,7 +39,7 @@ A responsive web app that helps you calculate tips quickly and easily. Whether y
 Everything updates instantly as you slide!
 
 
-## 📂 Installation (Optional)
+## Installation (Optional)
 
 To run locally:
 

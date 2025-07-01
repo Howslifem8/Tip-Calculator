@@ -16,13 +16,13 @@ A responsive web app that helps you calculate tips quickly and easily. Whether y
 ## Screenshots
 
 ### Mobile View
-![Mobile Screenshot](screenshots/mobile-view.png)
-![Mobile Screenshot](screenshots/mobile-view2.png)
+![Mobile Screenshot](screenshots/Mobile-view.png)
+![Mobile Screenshot](screenshots/Mobile-view2.png)
 
 
 ### Desktop View
-![Desktop Screenshot](screenshots/desktop-view.png)
-![Desktop Screenshot](screenshots/desktop-view2.png)
+![Desktop Screenshot](screenshots/Desktop-view.png)
+![Desktop Screenshot](screenshots/Desktop-view2.png)
 
 
 
